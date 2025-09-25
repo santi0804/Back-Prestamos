@@ -106,7 +106,7 @@ public class LoanController {
         return ResponseEntity.ok("Préstamo registrado correctamente");
     }
 
-    // Finalizar préstamo (solo administrador)
+    // Finalizar préstamo (solo admin)
     @PutMapping("/{id}/return")
     public ResponseEntity<?> returnLoan(
             @PathVariable Long id,
