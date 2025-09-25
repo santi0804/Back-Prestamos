@@ -6,44 +6,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 public class Loan {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
+    private String userDocument;  //para vincular el préstamo con el usuario
+    private LocalDateTime loanDate; //fechas del préstamo
+    private LocalDateTime returnDate;
+    private boolean returned;  //estado del préstamo
+
+    // Getters y setters
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
-    }
-
-    public boolean isReturned() {
-        return returned;
-    }
-
-    public void setReturned(boolean returned) {
-        this.returned = returned;
-    }
-
-    public LocalDateTime getReturnDate() {
-        return returnDate;
-    }
-
-    public void setReturnDate(LocalDateTime returnDate) {
-        this.returnDate = returnDate;
-    }
-
-    public LocalDateTime getLoanDate() {
-        return loanDate;
-    }
-
-    public void setLoanDate(LocalDateTime loanDate) {
-        this.loanDate = loanDate;
+        this.id = id;
     }
 
     public String getUserDocument() {
@@ -54,8 +36,27 @@ public class Loan {
         this.userDocument = userDocument;
     }
 
-    private String userDocument;
-    private LocalDateTime loanDate;
-    private LocalDateTime returnDate;
-    private boolean returned;
+    public LocalDateTime getLoanDate() {
+        return loanDate;
+    }
+
+    public void setLoanDate(LocalDateTime loanDate) {
+        this.loanDate = loanDate;
+    }
+
+    public LocalDateTime getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(LocalDateTime returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    public boolean isReturned() {
+        return returned;
+    }
+
+    public void setReturned(boolean returned) {
+        this.returned = returned;
+    }
 }
