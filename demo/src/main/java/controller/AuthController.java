@@ -1,11 +1,12 @@
-package com.example.demo;
+package controller;
 
+import dto.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.demo.UserRepository;
+import repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.User;
+import model.User;
 
 import java.util.Optional;
 

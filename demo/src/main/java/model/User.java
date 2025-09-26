@@ -1,4 +1,4 @@
-package com.example.demo;
+package model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,7 +8,6 @@ public class User {
 
     @Id
     private String document;
-
     private String name;
     private String password;
     private String role; // "USER" o "ADMIN"

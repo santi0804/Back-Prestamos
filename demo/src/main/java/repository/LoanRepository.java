@@ -1,5 +1,6 @@
-package com.example.demo;
+package repository;
 
+import model.Loan;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

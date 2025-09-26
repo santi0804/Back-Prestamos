@@ -1,4 +1,4 @@
-package com.example.demo;
+package dto;
 
 public class LoanRequest {
     private String document;
